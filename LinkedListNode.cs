@@ -1,47 +1,29 @@
-class LinkedList
+class LinkedListNode
     {
-        
-        public LinkedListNode head { get; set; }
-        public void Add(int valor)
+        private int valor;
+        private LinkedListNode proximoNo;
+
+        public LinkedListNode(int valor, LinkedListNode proximoNo)
         {
-            head = new LinkedListNode(valor, head);
-        }
-        public void Clear()
-        {
-            head = null;
+            this.valor = valor;
+            this.proximoNo = proximoNo;
         }
 
-        public bool Contains(int valor)
+        public LinkedListNode(int valor)
         {
-            while (valor != null)
-            {
-                if (valor == valor)
-                {
-                    return true;
-                }
-            }
-            return false;
+            this.valor = valor;
         }
 
-        public bool Remove(int valor)
+        public int GetValor()
         {
-            while (valor != null)
-            {
-               /* if (valor = IReadOnlyList.Equals(LinkedListNode.))
-                {*/
-                   
-                    return true;
-                //}
-
-            }
-            return false;
+            return valor;
         }
-
-        public void exibir()
+        public LinkedListNode GetProximoNo()
         {
-         
-            Console.WriteLine(head.GetValor());
+            return proximoNo;
+        } 
+        public void SetProximoNo(LinkedListNode proximoNo)
+        {
+            this.proximoNo = proximoNo;
         }
-
     }
-}
