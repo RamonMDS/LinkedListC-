@@ -1,32 +1,47 @@
-namespace LinkedList
-{
-    class LinkedListNode
+class LinkedList
     {
-        private int valor;
-        private LinkedListNode proximoNo;
-
-        public LinkedListNode(int valor, LinkedListNode proximoNo)
+        
+        public LinkedListNode head { get; set; }
+        public void Add(int valor)
         {
-            this.valor = valor;
-            this.proximoNo = proximoNo;
+            head = new LinkedListNode(valor, head);
+        }
+        public void Clear()
+        {
+            head = null;
         }
 
-        public LinkedListNode(int valor)
+        public bool Contains(int valor)
         {
-            this.valor = valor;
+            while (valor != null)
+            {
+                if (valor == valor)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
-        public int GetValor()
+        public bool Remove(int valor)
         {
-            return valor;
+            while (valor != null)
+            {
+               /* if (valor = IReadOnlyList.Equals(LinkedListNode.))
+                {*/
+                   
+                    return true;
+                //}
+
+            }
+            return false;
         }
-        public LinkedListNode GetProximoNo()
+
+        public void exibir()
         {
-            return proximoNo;
-        } 
-        public void SetProximoNo(LinkedListNode proximoNo)
-        {
-            this.proximoNo = proximoNo;
+         
+            Console.WriteLine(head.GetValor());
         }
+
     }
 }
